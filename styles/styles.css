@@ -1,0 +1,65 @@
+header, footer{
+    background-color: #8a8888;
+}
+body{
+    background-color: #cacaca;
+}
+
+/* propiedades para los h*/
+
+h1{
+    color: #ebb402da;
+    background-color: #8a8888;
+    font-size: 50px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight:900
+}
+h2{
+    font-size: 30px;
+}
+
+/* propiedades para listas del header y del footer*/
+
+nav ul{
+    display: inline-flex;
+    gap: 16px;  
+}
+
+header nav ul li, footer div div ul li{
+    list-style: none;
+}
+header nav ul li a, footer div div ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+footer div div{
+    display: inline-flex;
+    gap: 16px;  
+}
+
+/* propiedades para las imagenes*/
+
+.imagen-pequeña{
+  width: 200px;
+  height: auto;
+}
+.imagen-mediana{
+  width: 400px;
+  height: auto;
+}
+
+main section div div ul div li{
+    list-style: none;
+}
+
+main section div div ul{
+    display: inline-flex;
+    gap: 16px; 
+}
+
+main section div div {
+    display: inline-block;
+}
