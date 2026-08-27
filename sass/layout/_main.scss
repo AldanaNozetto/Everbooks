@@ -1,0 +1,30 @@
+@use '../utilities/variables' as *;
+
+main{
+    section{
+        padding: 0.7rem;
+        h2{
+            font-size: $alturaLetra-subtitulo;
+            font-weight: 500px;
+        }
+        h3{
+            font-size: $alturaLetra-otros-titulos;
+        }
+        div{
+            div{
+                display: inline-block;
+
+                ul{
+                    display: inline-flex;
+                    gap: 16px; 
+
+                    div{
+                        li{
+                            list-style: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

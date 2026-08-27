@@ -1,66 +1,189 @@
-header, footer{
-    background-color: #8a8888;
-}
-body{
-    background-color: #cacaca;
-}
-
-/* propiedades para los h*/
-
-h1{
-    color: #ebb402da;
-    background-color: #8a8888;
-    font-size: 50px;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 900px;
-}
-h2{
-    font-size: 30px;
-    font-weight: 500;
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px solid red;
 }
 
-/* propiedades para listas del header y del footer*/
-
-nav ul{
-    display: inline-flex;
-    gap: 16px;  
+/* propiedades para el carrusel*/
+.color-negro {
+  color: #000000;
 }
 
-header nav ul li, footer div div ul li{
-    list-style: none;
-}
-header nav ul li a, footer div div ul li a{
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 17px;
+.card-carrusel {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente imagen y card-body */
+  text-align: center; /* centra el texto dentro del card-body */
+  max-width: 400px; /* opcional: para que la card no se estire de más */
+  margin: 0 auto; /* centra el bloque completo dentro del carousel-item */
 }
 
-footer div div{
-    display: inline-flex;
-    gap: 16px;  
+.imagen-carrusel {
+  display: block;
+  max-height: 300px;
+  width: auto;
+  object-fit: contain;
+}
+
+.texto-centro {
+  text-align: center;
+}
+
+/* REFERNCIAS DE TAMAÑO
+
+imagen-pequeña{
+    display: flex;
+    max-width: 200px;
+    height: 200px;
+}
+imagen-mediana{
+    display: flex;
+    max-width: 400px;
+    height: 300px;
+}
+
+imagen-para-combinar{
+    display: inline-block;
+    max-width: 400px;
+    height: 300px;
+}
+
+*/
+/* EJEMPLO - gap(espacio entre elementos) - padding (espacio entre elemento y su borde)
+
+separar-imagenes{
+    display: inline-block;
+    gap: 16px;
+    padding: 5px;
+}
+*/
+/* class*/
+.color-blanco {
+  color: #ffffff;
+}
+
+.falso-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "logo derecha";
 }
 
 /* propiedades para las imagenes*/
-
-.imagen-pequeña{
-  width: 200px;
-  height: auto;
-}
-.imagen-mediana{
-  width: 400px;
-  height: auto;
+.imagen-pequeña {
+  display: flex;
+  max-width: 200px;
+  height: 200px;
 }
 
-main section div div ul div li{
-    list-style: none;
+.imagen-mediana {
+  display: flex;
+  max-width: 400px;
+  height: 300px;
 }
 
-main section div div ul{
-    display: inline-flex;
-    gap: 16px; 
+.imagen-combo {
+  display: inline-block;
+  max-width: 400px;
+  height: 300px;
 }
 
+.separar-imagenes {
+  display: inline-block;
+  gap: 16px;
+  padding: 0.2rem;
+}
+
+.tamaño-titulos-objetos {
+  font-size: 24px;
+}
+
+.centrar-imagenes {
+  display: block;
+  margin: 0 auto;
+}
+
+body {
+  padding: 0 0.2rem;
+  background-color: #cacaca;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+main section {
+  padding: 0.7rem;
+}
+main section h2 {
+  font-size: 30px;
+  font-weight: 500px;
+}
+main section h3 {
+  font-size: 22px;
+}
 main section div div {
-    display: inline-block;
+  display: inline-block;
 }
+main section div div ul {
+  display: inline-flex;
+  gap: 16px;
+}
+main section div div ul div li {
+  list-style: none;
+}
+
+header {
+  background-color: #8a8888;
+}
+header .logo-wrapper {
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* para que se centre verticalmente dentro de su columna */
+}
+header .header-derecha {
+  grid-area: derecha;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* reparte los 3 elementos: arriba, medio, abajo */
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 1.5rem 0; /* opcional: para que no queden pegados al borde superior/inferior */
+}
+header h1 {
+  color: rgba(235, 180, 2, 0.8549019608);
+  font-size: 50px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 900;
+}
+header h2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+header nav div {
+  display: inline-flex;
+  gap: 16px;
+  color: #ffffff;
+}
+
+footer {
+  background-color: #8a8888;
+}
+footer div div {
+  display: inline-flex;
+  gap: 16px;
+}
+footer div div ul li {
+  list-style: none;
+}
+footer div div ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+footer div p {
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

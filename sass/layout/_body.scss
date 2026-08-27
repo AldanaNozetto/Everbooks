@@ -1,0 +1,7 @@
+@use '../utilities/variables' as *;
+
+body{
+    padding: 0 0.2rem;
+    background-color: $colorFondo-body;
+    font-family: $fuente-general;
+}

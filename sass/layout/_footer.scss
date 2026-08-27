@@ -1,0 +1,26 @@
+@use '../utilities/variables' as *;
+
+footer{
+    background-color: $colorFondo-header-footer;
+    div{
+        div{
+            display: inline-flex;
+            gap: 16px; 
+            ul{
+                li{
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        color: $colorLetra-links;
+                        font-size: $alturaLetra-texto-comun;
+                    }
+                }
+            }
+        }
+    }
+    div{
+        p{
+            text-align: center;
+        }
+    }
+}

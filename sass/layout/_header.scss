@@ -1,0 +1,37 @@
+@use '../utilities/variables' as *;
+
+header{
+    background-color: $colorFondo-header-footer;
+    .logo-wrapper{
+        grid-area: logo;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%; /* para que se centre verticalmente dentro de su columna */
+    }
+    .header-derecha{
+        grid-area: derecha;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* reparte los 3 elementos: arriba, medio, abajo */
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        padding: 1.5rem 0; /* opcional: para que no queden pegados al borde superior/inferior */
+    }
+    h1{
+        color: $colorLetra-titulo-principal;
+        font-size: $alturaLetra-titulo-principal;
+        font-family: $fuente-titulo-principal;
+        font-weight: 900;
+    }
+    h2{
+        font-size: $alturaLetra-subtitulo;
+        font-weight: 500;
+    }
+    nav div{
+        display: inline-flex;
+        gap: 16px;
+        color: $colorLetra-links;
+    }
+}
