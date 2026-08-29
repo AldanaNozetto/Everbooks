@@ -1,0 +1,42 @@
+@mixin tamaño-imagen($display, $ancho, $alto){
+    display: $display;
+    max-width: $ancho;
+    max-height: $alto;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* REFERNCIAS DE TAMAÑO
+
+imagen-pequeña{
+    display: flex;
+    max-width: 200px;
+    height: 200px;
+}
+imagen-mediana{
+    display: flex;
+    max-width: 400px;
+    height: 300px;
+}
+
+imagen-para-combinar{
+    display: inline-block;
+    max-width: 400px;
+    height: 300px;
+}
+
+*/
+
+@mixin separar-imagenes($display, $gap, $padding){
+    display: $display;
+    gap: $gap;
+    padding: $padding;
+}
+
+@mixin wrapper-imagen($alto){
+    height: $alto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

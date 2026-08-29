@@ -1,0 +1,66 @@
+@use '../utilities/mixins' as *;
+
+$colorFondo-header-footer: #8a8888;
+$colorFondo-body: #cacaca;
+$colorLetra-titulo-principal: #ebb402da;
+$colorLetra-general: #000000;
+$colorLetra-links: #ffffff;
+
+$fuente-titulo-principal: Georgia, 'Times New Roman', Times, serif;
+$fuente-general: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+$alturaLetra-titulo-principal: 50px;
+$alturaLetra-subtitulo: 30px;
+$alturaLetra-otros-titulos: 22px;
+$alturaLetra-texto-comun: 16px;
+
+/* EJEMPLO - gap(espacio entre elementos) - padding (espacio entre elemento y su borde)
+
+separar-imagenes{
+    display: inline-block;
+    gap: 16px;
+    padding: 5px;
+}
+*/
+
+/* class*/
+.color-blanco{
+    color: #ffffff;
+}
+.falso-header{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "logo derecha";
+}
+/* propiedades para las imagenes*/
+.imagen-pequeña{
+    @include tamaño-imagen(flex, 200px, 200px)
+}
+.imagen-pequeña-wrapper {
+    @include wrapper-imagen(200px);
+}
+.imagen-mediana{
+    @include tamaño-imagen(flex, 400px, 300px)
+}
+.imagen-combo{
+    @include tamaño-imagen(inline-block, 400px, 300px)
+}
+.separar-imagenes{
+    @include separar-imagenes(inline-block, 16px, 0.2rem)
+}
+.tamaño-titulos-objetos{
+    font-size: 24px;
+}
+.centrar-imagenes{
+    display: block;
+    margin: 0 auto;
+}
+.zoom-imagenes{
+    transition: transform 0.3 ease;
+}
+.zoom-imagenes:hover{
+    transform: scale(1.1);
+}
+.animation-zoom-container{
+    overflow: hidden;
+}
