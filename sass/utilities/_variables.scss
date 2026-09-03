@@ -27,6 +27,9 @@ separar-imagenes{
 .color-blanco{
     color: #ffffff;
 }
+.listas-sin-puntos{
+    @extend %quitar-puntos;
+}
 .falso-header{
     display: grid;
     grid-template-columns: 1fr 2fr;

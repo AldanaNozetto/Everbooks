@@ -50,6 +50,10 @@ imagen-para-combinar{
 }
 
 */
+.listas-sin-puntos, footer div div div ul li {
+  list-style: none;
+}
+
 /* EJEMPLO - gap(espacio entre elementos) - padding (espacio entre elemento y su borde)
 
 separar-imagenes{
@@ -204,19 +208,16 @@ footer .container {
   padding-left: 0rem;
   padding-right: 0rem;
 }
-footer div div {
+footer div div div {
   display: inline-flex;
   gap: 16px;
 }
-footer div div ul li {
-  list-style: none;
-}
-footer div div ul li a {
+footer div div div ul li a {
   text-decoration: none;
   color: #ffffff;
   font-size: 16px;
 }
-footer div p {
+footer div div p {
   text-align: center;
 }
 
