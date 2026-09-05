@@ -78,7 +78,7 @@ separar-imagenes{
   display: flex;
   max-width: 200px;
   max-height: 200px;
-  width: auto;
+  width: 100%;
   height: auto;
   object-fit: contain;
 }
@@ -94,7 +94,7 @@ separar-imagenes{
   display: flex;
   max-width: 400px;
   max-height: 300px;
-  width: auto;
+  width: 100%;
   height: auto;
   object-fit: contain;
 }
@@ -103,15 +103,18 @@ separar-imagenes{
   display: inline-block;
   max-width: 400px;
   max-height: 300px;
-  width: auto;
+  width: 100%;
   height: auto;
   object-fit: contain;
 }
 
 .separar-imagenes {
-  display: inline-block;
+  display: flex;
   gap: 16px;
   padding: 0.2rem;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
 }
 
 .tamaño-titulos-objetos {
