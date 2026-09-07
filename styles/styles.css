@@ -5,31 +5,6 @@
   box-sizing: border-box;
 }
 
-/* propiedades para el carrusel*/
-.color-negro {
-  color: #000000;
-}
-
-.card-carrusel {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* centra horizontalmente imagen y card-body */
-  text-align: center; /* centra el texto dentro del card-body */
-  max-width: 400px; /* opcional: para que la card no se estire de más */
-  margin: 0 auto; /* centra el bloque completo dentro del carousel-item */
-}
-
-.imagen-carrusel {
-  display: block;
-  max-height: 300px;
-  width: auto;
-  object-fit: contain;
-}
-
-.texto-centro {
-  text-align: center;
-}
-
 /* REFERNCIAS DE TAMAÑO
 
 imagen-pequeña{
@@ -71,6 +46,12 @@ separar-imagenes{
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-areas: "logo derecha";
+}
+@media (max-width: 767px) {
+  .falso-header {
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "derecha";
+  }
 }
 
 /* propiedades para las imagenes*/
@@ -138,6 +119,36 @@ separar-imagenes{
   overflow: hidden;
 }
 
+/* propiedades para el carrusel*/
+.color-negro {
+  color: #000000;
+}
+
+.card-carrusel {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente imagen y card-body */
+  text-align: center; /* centra el texto dentro del card-body */
+  max-width: 400px; /* opcional: para que la card no se estire de más */
+  margin: 0 auto; /* centra el bloque completo dentro del carousel-item */
+}
+
+.imagen-carrusel {
+  display: block;
+  max-height: 300px;
+  width: auto;
+  object-fit: contain;
+}
+@media (max-width: 767px) {
+  .imagen-carrusel {
+    max-height: 200px;
+  }
+}
+
+.texto-centro {
+  text-align: center;
+}
+
 body {
   background-color: #cacaca;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -194,9 +205,19 @@ header h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 900;
 }
+@media (max-width: 767px) {
+  header h1 {
+    font-size: 32px;
+  }
+}
 header h2 {
   font-size: 30px;
   font-weight: 500;
+}
+@media (max-width: 767px) {
+  header h2 {
+    font-size: 20px;
+  }
 }
 header nav div {
   display: inline-flex;
@@ -214,6 +235,11 @@ footer .container {
 footer div div div {
   display: inline-flex;
   gap: 16px;
+}
+@media (max-width: 767px) {
+  footer div div div {
+    gap: 8px;
+  }
 }
 footer div div div ul li a {
   text-decoration: none;

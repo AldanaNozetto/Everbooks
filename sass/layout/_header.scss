@@ -24,10 +24,18 @@ header{
         font-size: $alturaLetra-titulo-principal;
         font-family: $fuente-titulo-principal;
         font-weight: 900;
+
+        @media (max-width: $breakpoint-mobile) {
+        font-size: 32px;
+        }
     }
     h2{
         font-size: $alturaLetra-subtitulo;
         font-weight: 500;
+
+        @media (max-width: $breakpoint-mobile) {
+        font-size: 20px;
+        }
     }
     nav div{
         display: inline-flex;

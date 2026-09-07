@@ -14,6 +14,8 @@ $alturaLetra-subtitulo: 30px;
 $alturaLetra-otros-titulos: 22px;
 $alturaLetra-texto-comun: 16px;
 
+$breakpoint-mobile: 767px;
+
 /* EJEMPLO - gap(espacio entre elementos) - padding (espacio entre elemento y su borde)
 
 separar-imagenes{
@@ -34,6 +36,12 @@ separar-imagenes{
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas: "logo derecha";
+    @media (max-width: $breakpoint-mobile) {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "logo"
+            "derecha";
+    }
 }
 /* propiedades para las imagenes*/
 .imagen-pequeña{
